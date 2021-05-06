@@ -13,7 +13,7 @@
 
 ## Demo URL
 
-[Demo Site](https://movieslider.netlify.app/){:target="_blank"}
+<a href="https://movieslider.netlify.app/" target="_blank">Demo Site</a>
 
 ## Skills
 
