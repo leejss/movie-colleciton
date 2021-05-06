@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
-import { sidebarData } from "../data/sidebarData";
-import palette from "../lib/style/palette";
+import { sidebarData } from "../../data/sidebarData";
+import palette from "../../lib/style/palette";
 
 const TopNavBlock = styled.div`
   background-color: ${palette.navBackground};

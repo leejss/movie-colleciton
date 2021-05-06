@@ -1,0 +1,17 @@
+.topnav {
+    background: #fe0000;
+    height: 5vh;
+    display: flex;
+    justify-content: flex-end;
+
+    &-link {
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 10px;
+        font-size: 1.3rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

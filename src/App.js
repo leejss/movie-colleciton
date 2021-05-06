@@ -2,15 +2,15 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import TopRatedPage from "./pages/TopRatedPage";
-import Sidebar from "./components/Sidebar";
 import "./App.css";
 import TrendingPage from "./pages/TrendingPage";
 import UpcomingPage from "./pages/UpcomingPage";
+import TopNav from "./components/common/TopNav";
 
 const App = () => {
   return (
     <div className="app">
-      {/* <Sidebar /> */}
+      <TopNav />
       <Switch>
         <Route path="/" component={HomePage} exact />
         <Route path="/top-rated" component={TopRatedPage} />
