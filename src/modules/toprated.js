@@ -20,6 +20,7 @@ export const getToprated = () => {
 const initialState = {
   loading: false,
   topRated: [],
+  error: null,
 };
 
 const toprated = (state = initialState, action) => {

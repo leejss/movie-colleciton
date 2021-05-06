@@ -1,35 +1,24 @@
-import React from "react";
-import styled from "styled-components";
-import palette from "../lib/style/palette";
-
+import React, { useEffect, useRef } from "react";
+import { draggable } from "../lib/draggable";
+import "./Content.scss";
 const BASE_URL = "https://image.tmdb.org/t/p/original";
 
-const ContentBlock = styled.div`
-  height: 93vh;
-  background-color: ${palette.contentBackground};
-
-  .image-container {
-    display: flex;
-    flex-wrap: wrap;
-
-    img {
-      height: 300px;
-    }
-  }
-`;
-
 const Content = ({ movies, title, loading }) => {
-  console.log(title);
-  console.log(movies);
+  const ref = useRef(null);
+  useEffect(() => {
+    draggable(ref);
+  }, []);
   return (
-    <ContentBlock>
-      <h1>{title}</h1>
-      <div class="image-container">
+    <div className="container">
+      <h1 className="title">{title}</h1>
+      <div className="wrapper" ref={ref}>
         {loading ? (
           <h1>Loading ...</h1>
         ) : (
           movies.map((movie) => (
             <img
+              className="img-card"
+              draggable="false"
               src={`${BASE_URL}${movie.poster_path}`}
               alt="poster"
               key={movie.id}
@@ -37,7 +26,7 @@ const Content = ({ movies, title, loading }) => {
           ))
         )}
       </div>
-    </ContentBlock>
+    </div>
   );
 };
 

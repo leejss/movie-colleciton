@@ -4,7 +4,6 @@ import Content from "../components/Content";
 import { getToprated } from "../modules/toprated";
 
 const TopRatedContainer = () => {
-  console.log("TopRatedContainer");
   const dispatch = useDispatch();
   const { topRated, loading } = useSelector((state) => ({
     topRated: state.toprated.topRated,
